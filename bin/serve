@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "trollop"
+
+options = Trollop.options do
+  opt :port, "Port to serve the application on", type: :integer, default: 8000
+end
+
+cmd = "beefy -p #{options[:port]} #{File.expand_path("../../index.html", __FILE__)}"
+
+IO.popen(cmd) do |stream|
+  puts stream.gets until stream.eof?
+end

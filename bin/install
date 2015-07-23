@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+echo "Installing dependencies";
+
+npm install;
+bundle install;
+
+echo "Installation complete! Run 'bin/serve' to start the server!"

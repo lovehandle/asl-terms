@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "csv"
+require "asl"
+
+INPUT  = File.expand_path("../../data/terms.csv", __FILE__)
+OUTPUT = File.expand_path("../../data/terms.json", __FILE__)
+
+raise ArgumentError, "file does not exist: `#{INPUT}`" unless File.exist?(INPUT)
+
+terms = [].tap do |arr|
+  CSV.foreach(INPUT, headers: true) do |row|
+    term, id, variation, tags = row[0], row[1], row[2], row[3].to_s.split
+    puts "Searching for video: '#{term}'"
+    ASL::Gateway.find(term, id, variation).each do |video|
+      arr.push({ key: term.to_s.upcase, value: video.url, tags: tags })
+    end
+  end
+end
+
+File.write(OUTPUT, terms.to_json)

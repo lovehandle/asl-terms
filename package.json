@@ -1,0 +1,13 @@
+{
+  "name": "asl-terms",
+  "version": "0.0.0",
+  "description": "An ASL terms site",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lovehandle/asl-terms"
+  },
+  "dependencies": {
+    "beefy": "*"
+  },
+  "license": "MIT"
+}
