@@ -11,7 +11,7 @@ A website for learning ASL terms
 ## Usage
 
 ```
-./bin/serve
+gulp
 ```
 
 ## Contributing
