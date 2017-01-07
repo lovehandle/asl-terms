@@ -21,6 +21,7 @@ gulp.task('js', function () {
     .pipe(concat('application.js'))
     .pipe(browserify())
     .pipe(gulp.dest('./js'))
+    .pipe(connect.reload())
 });
 
 gulp.task('compass', function () {
@@ -32,6 +33,7 @@ gulp.task('compass', function () {
     }))
     .on('error', gutil.log)
     .pipe(gulp.dest('./css'))
+    .pipe(connect.reload())
 
 });
 

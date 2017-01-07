@@ -7971,6 +7971,9 @@ h1, h2, h3, h4, h5, h6 {
 .header-container {
   text-align: center;
 }
+.header-container img {
+  max-width: 50px;
+}
 
 #question-list li {
   text-align: center;
