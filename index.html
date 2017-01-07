@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="css/application.css">
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   </head>
@@ -18,14 +19,14 @@
       <header class="wrapper clearfix">
         <h1 class="title">ASL Terms</h1>
         <nav>
-          <ul>
-            <li>
+          <ul class="tabs">
+            <li class="tab col s4">
               <a href="?tag=alphabet">Letters</a>
             </li>
-            <li>
+            <li class="tab col s4">
               <a href="?tag=number">Numbers</a>
             </li>
-            <li>
+            <li class="tab col s4">
               <a href="?tag=verbs">Verbs</a>
             </li>
 
@@ -34,10 +35,10 @@
       </header>
     </div>
 
-    <div class="main-container">
-      <div class="main wrapper clearfix">
+    <div class="container main-container">
+      <div class="row main wrapper clearfix">
 
-        <div class="left">
+        <div class="col s8">
           <ul id="stats">
             <li>
               <span>Total:</span>
@@ -57,23 +58,29 @@
             </li>
           </ul>
 
-          <h1 id="question">
-          </h1>
 
-          <div id="answer">
-            <video></video>
+
+          <div class="card">
+            <div id="answer" class=" card-content">
+              <video></video>
+            </div>
+            <div>
+              <a href="#" class="show-answer">Show</a>
+              <a href="#" class="question-skipped">Skip</a>
+            </div>
           </div>
 
-          <p>
-          <a href="#" class="show-answer">Show</a>
-          <a href="#" class="question-skipped">Skip</a>
-          </p>
+          <h2 id="question">
+          </h2>
+
+
+
 
           <a href="#" class="question-correct">Correct</a>
           <a href="#" class="question-incorrect">Incorrect</a>
         </div>
 
-        <div class="right">
+        <div class="col s4">
           <h1>All Terms</h1>
           <ul id="question-list">
           </ul>
@@ -87,8 +94,8 @@
       </footer>
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-    <script src="js/main.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
+    <script src="js/application.js"></script>
   </body>
 </html>
